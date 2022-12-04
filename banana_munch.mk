@@ -14,6 +14,9 @@ $(call inherit-product, vendor/banana/config/common.mk)
 # Inherit from munch device
 $(call inherit-product, device/xiaomi/munch/device.mk)
 
+# Inherit viper4android stuff
+$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+
 #Banandroid Stuff
 BANANA_MAINTAINER := Mudit
 TARGET_ENABLE_BLUR := true
