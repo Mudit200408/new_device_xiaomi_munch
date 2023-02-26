@@ -14,3 +14,6 @@ vendor.nxp.nxpnfc::INxpNfc                                          u:object_r:h
 vendor.xiaomi.hardware.citsensorservice::ICitSensorService                    u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0
 
 vendor.google.google_battery::IGoogleBattery                        u:object_r:hal_turbo_adapter_hwservice:s0
+
+# Touch Feature
+vendor.xiaomi.hardware.touchfeature::ITouchFeature                                    u:object_r:hal_touchfeature_xiaomi_hwservice:s0
