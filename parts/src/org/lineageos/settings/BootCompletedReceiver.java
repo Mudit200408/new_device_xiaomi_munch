@@ -60,7 +60,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
                 HdrCapabilities.HDR_TYPE_HLG, HdrCapabilities.HDR_TYPE_HDR10_PLUS});
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
-        FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0"); 
-
+        FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
+        FileUtils.enableService(context);
     }
 }
