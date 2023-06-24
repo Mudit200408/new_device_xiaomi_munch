@@ -3,5 +3,3 @@ binder_call(platform_app, vendor_hal_soter_qti)
 
 dontaudit platform_app default_android_hwservice:hwservice_manager { find };
 dontaudit platform_app hal_power_service:service_manager { find };
-
-allow platform_app hal_turbo_adapter_hwservice:hwservice_manager find;
