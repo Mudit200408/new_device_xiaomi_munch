@@ -8,8 +8,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common BananaDroid stuff
-$(call inherit-product, vendor/banana/config/common.mk)
+# Inherit some common ColtOS stuff.
+$(call inherit-product, vendor/colt/config/common_full_phone.mk)
 
 # Inherit from munch device
 $(call inherit-product, device/xiaomi/munch/device.mk)
@@ -17,24 +17,21 @@ $(call inherit-product, device/xiaomi/munch/device.mk)
 # Inherit viper4android stuff
 $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
-#Banandroid Stuff
-BANANA_MAINTAINER := Mudit
-TARGET_ENABLE_BLUR := true
-TARGET_EXCLUDE_MATLOG := true
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SUPPORTS_QUICK_TAP := true
+#Colt
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_USE_PIXEL_CHARGER := true
+TARGET_USES_BLUR := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
-#GAPPS
+# Gapps
 WITH_GAPPS := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGER_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_INCLUDE_NGA := true
 
-#CoreGapps
-#BUILD_CORE_GAPPS := true
-#BUILD_CORE_GAPPS_EXTRA := true
-TARGET_USE_GOOGLE_TELEPHONY := true
+# Official
+COLT_BUILD_TYPE := Official
+COLT_BUILD_MAINTAINER := Rakesh Bhatra
 
-PRODUCT_NAME := banana_munch
+PRODUCT_NAME := colt_munch
 PRODUCT_DEVICE := munch
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
